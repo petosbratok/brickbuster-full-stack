@@ -1,0 +1,263 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block links %}
+  <link rel="stylesheet" href="{% static 'blog/game.css' %}">
+{% endblock %}
+{% block content %}
+<span class="game-over">game over!</span>
+<span class="score-saved">score saved!</span>
+<div id="game" class="main">
+  <div class="game">
+    <table class="table-main">
+      <tbody>
+        <tr>
+        <td id="0_0"></td>
+        <td id="0_1"></td>
+        <td id="0_2"></td>
+        <td id="0_3"></td>
+        <td id="0_4"></td>
+        <td id="0_5"></td>
+        <td id="0_6"></td>
+        <td id="0_7"></td>
+        </tr>
+        <tr>
+        <td id="1_0"></td>
+        <td id="1_1"></td>
+        <td id="1_2"></td>
+        <td id="1_3"></td>
+        <td id="1_4"></td>
+        <td id="1_5"></td>
+        <td id="1_6"></td>
+        <td id="1_7"></td>
+      </tr>
+        <tr>
+        <td id="2_0"></td>
+        <td id="2_1"></td>
+        <td id="2_2"></td>
+        <td id="2_3"></td>
+        <td id="2_4"></td>
+        <td id="2_5"></td>
+        <td id="2_6"></td>
+        <td id="2_7"></td>
+        </tr>
+        <tr>
+        <td id="3_0"></td>
+        <td id="3_1"></td>
+        <td id="3_2"></td>
+        <td id="3_3"></td>
+        <td id="3_4"></td>
+        <td id="3_5"></td>
+        <td id="3_6"></td>
+        <td id="3_7"></td>
+        </tr>
+        <tr>
+        <td id="4_0"></td>
+        <td id="4_1"></td>
+        <td id="4_2"></td>
+        <td id="4_3"></td>
+        <td id="4_4"></td>
+        <td id="4_5"></td>
+        <td id="4_6"></td>
+        <td id="4_7"></td>
+        </tr>
+        <tr>
+        <td id="5_0"></td>
+        <td id="5_1"></td>
+        <td id="5_2"></td>
+        <td id="5_3"></td>
+        <td id="5_4"></td>
+        <td id="5_5"></td>
+        <td id="5_6"></td>
+        <td id="5_7"></td>
+        </tr>
+        <tr>
+        <td id="6_0"></td>
+        <td id="6_1"></td>
+        <td id="6_2"></td>
+        <td id="6_3"></td>
+        <td id="6_4"></td>
+        <td id="6_5"></td>
+        <td id="6_6"></td>
+        <td id="6_7"></td>
+        </tr>
+        <tr>
+        <td id="7_0"></td>
+        <td id="7_1"></td>
+        <td id="7_2"></td>
+        <td id="7_3"></td>
+        <td id="7_4"></td>
+        <td id="7_5"></td>
+        <td id="7_6"></td>
+        <td id="7_7"></td>
+        </tr>
+        <tr>
+        <td id="8_0"></td>
+        <td id="8_1"></td>
+        <td id="8_2"></td>
+        <td id="8_3"></td>
+        <td id="8_4"></td>
+        <td id="8_5"></td>
+        <td id="8_6"></td>
+        <td id="8_7"></td>
+        </tr>
+        <tr>
+        <td id="9_0"></td>
+        <td id="9_1"></td>
+        <td id="9_2"></td>
+        <td id="9_3"></td>
+        <td id="9_4"></td>
+        <td id="9_5"></td>
+        <td id="9_6"></td>
+        <td id="9_7"></td>
+        </tr>
+        <tr>
+        <td id="10_0"></td>
+        <td id="10_1"></td>
+        <td id="10_2"></td>
+        <td id="10_3"></td>
+        <td id="10_4"></td>
+        <td id="10_5"></td>
+        <td id="10_6"></td>
+        <td id="10_7"></td>
+        </tr>
+        <tr>
+        <td id="11_0"></td>
+        <td id="11_1"></td>
+        <td id="11_2"></td>
+        <td id="11_3"></td>
+        <td id="11_4"></td>
+        <td id="11_5"></td>
+        <td id="11_6"></td>
+        <td id="11_7"></td>
+        </tr>
+        <tr>
+        <td id="12_0"></td>
+        <td id="12_1"></td>
+        <td id="12_2"></td>
+        <td id="12_3"></td>
+        <td id="12_4"></td>
+        <td id="12_5"></td>
+        <td id="12_6"></td>
+        <td id="12_7"></td>
+        </tr>
+        <tr>
+        <td id="13_0"></td>
+        <td id="13_1"></td>
+        <td id="13_2"></td>
+        <td id="13_3"></td>
+        <td id="13_4"></td>
+        <td id="13_5"></td>
+        <td id="13_6"></td>
+        <td id="13_7"></td>
+        </tr>
+        <tr>
+        <td id="14_0"></td>
+        <td id="14_1"></td>
+        <td id="14_2"></td>
+        <td id="14_3"></td>
+        <td id="14_4"></td>
+        <td id="14_5"></td>
+        <td id="14_6"></td>
+        <td id="14_7"></td>
+        </tr>
+        <tr>
+        <td id="15_0"></td>
+        <td id="15_1"></td>
+        <td id="15_2"></td>
+        <td id="15_3"></td>
+        <td id="15_4"></td>
+        <td id="15_5"></td>
+        <td id="15_6"></td>
+        <td id="15_7"></td>
+        </tr>
+        <tr>
+        <td id="16_0"></td>
+        <td id="16_1"></td>
+        <td id="16_2"></td>
+        <td id="16_3"></td>
+        <td id="16_4"></td>
+        <td id="16_5"></td>
+        <td id="16_6"></td>
+        <td id="16_7"></td>
+        </tr>
+        <tr>
+        <td id="17_0"></td>
+        <td id="17_1"></td>
+        <td id="17_2"></td>
+        <td id="17_3"></td>
+        <td id="17_4"></td>
+        <td id="17_5"></td>
+        <td id="17_6"></td>
+        <td id="17_7"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="score-and-info">
+      <div class="game-info">
+        <table class="table-sub">
+          <tbody>
+            <tr>
+            <td id="sub0_1"></td>
+            <td id="sub0_2"></td>
+            <td id="sub0_3"></td>
+            <td id="sub0_4"></td>
+            <td id="sub0_5"></td>
+            </tr>
+            <tr>
+            <td id="sub1_1"></td>
+            <td id="sub1_2"></td>
+            <td id="sub1_3"></td>
+            <td id="sub1_4"></td>
+            <td id="sub1_5"></td>
+          </tr>
+            <tr>
+            <td id="sub2_1"></td>
+            <td id="sub2_2"></td>
+            <td id="sub2_3"></td>
+            <td id="sub2_4"></td>
+            <td id="sub2_5"></td>
+            </tr>
+            <tr>
+            <td id="sub3_1"></td>
+            <td id="sub3_2"></td>
+            <td id="sub3_3"></td>
+            <td id="sub3_4"></td>
+            <td id="sub3_5"></td>
+            </tr>
+            <tr>
+            <td id="sub4_1"></td>
+            <td id="sub4_2"></td>
+            <td id="sub4_3"></td>
+            <td id="sub4_4"></td>
+            <td id="sub4_5"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="set-difficulty">
+          <button id="normal" onclick='choose_difficulty("normal")' class="btn-difficulty">Normal</button>
+          <button id="hard"  onclick='choose_difficulty("hard")' class="btn-difficulty">Hard</button>
+          <button id="insane"  onclick='choose_difficulty("insane")' class="btn-difficulty">Insane</button>
+        </div>
+        <div class="game-control">
+          <button id="button_start" type="button"  onclick='game()' name="button">Start</button>
+          <button id="button_reset" type="button" onclick='reset()' name="button">Reset</button>
+        </div>
+      </div>
+      <form id="post_score_form" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <div class="score">
+                <span>Score: </span><span id="score">0</span>
+                <input style="display: none;" type="input" name="score" value="0" class="numberinput form-control" required="" id="id_score">
+                <button style="display: none;" id="save_score_btn" type="submit" name="button">save score</button>
+              </div>
+          </fieldset>
+      </form>
+    </div>
+</div>
+</div>
+{% endblock content %}
+{% block scripts %}
+  <script src="{% static 'js/game.js' %}"></script>
+{% endblock scripts %}
