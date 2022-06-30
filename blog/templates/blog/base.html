@@ -62,7 +62,7 @@
               </span>
             </div>
           </li>
-          <li><a href="{% url 'scoreboard' %}" class="menu-link">Scoreboard</a></li>
+          <li><a href="{% url 'scoreboard' %}" class="menu-link">Leaderboard</a></li>
           <!-- <li><a target="_blank" href="https://github.com/petosbratok" class="menu-link">Other projects</a></li> -->
         {% if user.is_authenticated %}
           <li><a class="menu-link" href="{% url 'profile' %}">Profile</a></li>
@@ -116,7 +116,7 @@
                 </span>
               </div>
             </li>
-            <li><a href="{% url 'scoreboard' %}" class="menu-link">Scoreboard</a></li>
+            <li><a href="{% url 'scoreboard' %}" class="menu-link">Leaderboard</a></li>
             {% if user.is_authenticated %}
               <li><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
               <li><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
