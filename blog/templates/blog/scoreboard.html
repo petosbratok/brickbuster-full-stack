@@ -1,23 +1,28 @@
 {% extends "blog/base.html" %}
 {% load static %}
+{% block links %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/scoreboard-media.css' %}">
+{% endblock %}
 {% block content %}
   <table class="scoreboard infinite-container">
         <thead>
           <tr style="background: #222222;">
-            <th class="rank" style="width: 10%; padding-left: 20px;">rank</th>
+            <th class="rank col-1" style="width: 10%; padding-left: 20px;">rank</th>
             <!-- <th style="width: 10%">id</th> -->
-            <th style="width: 25%">player</th>
-            <th style="width: 30%;">score</th>
-            <th style="width: 35%;">date</th>
+            <th class="col-2" style="width: 25%">player</th>
+            <th class="col-3" style="width: 30%;">score</th>
+            <th class="col-4" style="width: 35%;">date</th>
           </tr>
         </thead>
     {% for post in posts %}
         <tr class="infinite-item">
-            <th class="rank" >{{ page_obj.start_index|add:forloop.counter0 }}</th>
+            <th class="rank col-1" >{{ page_obj.start_index|add:forloop.counter0 }}</th>
             <!-- <th>{{ post.id }}</th> -->
-            <th><a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a></th>
-            <th>{{ post.score }}</th>
-            <th><small class="text-muted">{{ post.date_posted|date:"H:i F d, Y" }}</small></th>
+            <th class="col-2"><a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a></th>
+            <th class="col-3">{{ post.score }}</th>
+            <th class="col-4"><small class="text-muted">{{ post.date_posted|date:"H:i F d, Y" }}</small></th>
         </tr>
     {% endfor %}
   </table>

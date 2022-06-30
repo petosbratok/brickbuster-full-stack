@@ -117,6 +117,24 @@
   .carousel-cell{
     width: calc(100vw - 180px);
   }
+  .dropdown-content{
+    width: 80%;
+    left: 10%;
+    margin-left: 0;
+  }
+  .dropdown-line{
+    padding: 0 !important;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .dropdown-line span{
+    display: inline !important;
+    text-align: left !important;
+  }
+  .dropdown-line span:hover{
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
 }
 
 @media (min-width: 800px) {
