@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/hamburger.css' %}">
     {% block links %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="{% static 'blog/home-media.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,6 +74,59 @@
         </ul>
       </div>
       </header>
+      <nav>
+        <button style="display: block;" id="nav-button" class="hamburger hamburger--squeeze" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="ul-container hidden">
+          <ul>
+            <div class="logo">
+              <a href="{% url 'home' %}"><h1>BRICKBUSTER</h1></a>
+              <div class="logo-line"></div>
+              <div class="made-by">made by <a target="_blank"  href="https://github.com/petosbratok">petosbratok</a></div>
+            </div>
+            <li class="dropdown">
+              <span class="menu-link"><i class="fas fa-caret-down"></i> How to play</span>
+              <div class="dropdown-content">
+                <span <div class="dropdown-line">
+                  <span>Move left:</span>
+                  <!-- <i class="how-to-icon fas fa-long-arrow-alt-left"></i> -->
+                  <img src="{% static 'img/arrow-right.png' %}" alt="" class="arrow-left">
+                </span>
+                <span <div class="dropdown-line">
+                  <span>Move right:</span>
+                  <!-- <i class="how-to-icon fas fa-long-arrow-alt-right"></i> -->
+                  <img src="{% static 'img/arrow-right.png' %}" alt="">
+                </span>
+                <span <div class="dropdown-line">
+                  <span>Rotate:</span>
+                  <!-- <i class="how-to-icon fas fa-long-arrow-alt-up"></i> -->
+                  <img src="{% static 'img/arrow-right.png' %}" alt="" class="arrow-up">
+                </span>
+                <span <div class="dropdown-line">
+                  <span>Speed up:</span>
+                  <!-- <i class="how-to-icon fas fa-long-arrow-alt-down"></i> -->
+                  <img src="{% static 'img/arrow-right.png' %}" alt="" class="arrow-down">
+                </span>
+                <span <div class="dropdown-line">
+                  <span>Pause:</span>
+                  <span>Esc</span>
+                </span>
+              </div>
+            </li>
+            <li><a href="{% url 'scoreboard' %}" class="menu-link">Scoreboard</a></li>
+            {% if user.is_authenticated %}
+              <li><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+              <li><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+              <li><a class="nav-link" href="{% url 'login' %}">Log In</a></li>
+              <li><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
       <main class="content">
         {% block content %}{% endblock %}
       </main>
@@ -112,6 +166,20 @@
   </body>
   <script></script>
   <script src="https://kit.fontawesome.com/97be8968f0.js" crossorigin="anonymous"></script>
+  <script>
+    // activate hamburger button
+    var body = document.querySelector("body");
+    var hamburger = document.querySelector(".hamburger");
+    var ul_container = document.querySelector(".ul-container")
+      // On click
+    hamburger.addEventListener("click", function() {
+      // Toggle class "is-active"
+      console.log('done')
+      hamburger.classList.toggle("is-active");
+      body.classList.toggle("hide_scroll");
+      ul_container.classList.toggle("hidden");
+    });
+  </script>
   {% block scripts %}
   {% endblock %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
