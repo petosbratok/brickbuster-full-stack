@@ -1,0 +1,138 @@
+@media (max-width: 1100px){
+  header{
+    display: none;
+  }
+  body{
+    min-width: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .handling{
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .content{
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  #game{
+    margin: 0 !important;
+  }
+  .game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .score-and-info{
+    /* position: absolute; */
+    /* bottom: 0; */
+    margin-top: 20px !important;
+    margin: 0;
+  }
+  .table-main{
+    width: 60vw;
+  }
+  .table-sub{
+    width: 25vw;
+    background: #a0e1e5;
+  }
+
+  td, .score-saved, .game-over{
+    height: 7.5vw;
+  }
+  .table-sub td{
+    height: 5vw;
+  }
+  .handling{
+    width: 100%;
+    display: flex;
+  }
+  .handling button{
+    width: 100%;
+  }
+  .set-difficulty, .handling{
+    margin-top: 10px;
+  }
+  .score{
+    display: flex;
+    justify-content: center;
+  }
+  #score{
+    padding-left: 5px;
+  }
+  #left{
+    background-color: #6A8EAE;
+  }
+  #right{
+    background-color: #E85D75;
+  }
+  #rotate{
+    background-color: #0C1B33;
+  }
+  .score-and-info{
+    width: 80%;
+  }
+  .game-info div{
+    width: 100%;
+  }
+  .score-saved, .game-over{
+    width: 100vw;
+    left: 0 !important;
+  }
+  .game{
+    flex-direction: column;
+  }
+  footer{
+    flex-direction: column;
+    min-height: 50vh;
+  }
+  .created-by, .flexing-container{
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 30px;
+  }
+  .created-by *{
+    font-size: 14px !important;
+  }
+  .technologies{
+    margin-right: 0px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  footer{
+    /* min-height: 70vh; */
+  }
+  .flexing-container{
+    flex-direction: column;
+    padding: 0 15px;
+  }
+  .technologies, .can-do{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .created-by{
+    text-align: center;
+  }
+  .technologies p, .can-do p{
+    padding-right: 10px;
+    width: 34%;
+  }
+  .technologies ul{
+    width: 100%;
+    columns: 2;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .flexing-container ul{
+    width: 200px;
+  }
+}

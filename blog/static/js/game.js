@@ -182,7 +182,7 @@ async function move_object() {
         }
       }
       for (g = 1; g < 11; g++){
-        if (keyState[40]){await sleep(5) }
+        if (keyState[40]){ await sleep(5) }
         else {
           await sleep(current_speed);
         }
