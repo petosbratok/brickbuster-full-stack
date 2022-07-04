@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UsereUpdateForm, ProfileUpdateForm
+from django.contrib.auth import authenticate, login
 
 def register(request):
     if request.method == 'POST':
@@ -11,7 +12,11 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created succesfully! Login here.')
-            return redirect('login')
+            new_user = authenticate(username=form.cleaned_data.get('username'),
+                                    password=form.cleaned_data.get('password1'),
+                                    )
+            login(request, new_user)
+            return HttpResponseRedirect("/")
     else:
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
