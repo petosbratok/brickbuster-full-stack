@@ -2,7 +2,7 @@
 # Brickbuster
 
 ## About
-Brickbuster is a tetris-alike full stack website 
+Brickbuster is a tetris-alike full stack website <br>
 Link: [brickbuster.pythonanywhere.com](http://brickbuster.pythonanywhere.com) (**adblock recommended**)
 
 Implemented features:
