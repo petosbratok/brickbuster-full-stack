@@ -32,7 +32,7 @@ $ pip install -r requirements.txt
 
 Once  `pip`  has finished downloading the dependencies:
 
-$ cd project
+$ cd project <br>
 $ python manage.py runserver
 
 # Main links 
